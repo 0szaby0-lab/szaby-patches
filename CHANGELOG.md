@@ -1,3 +1,9 @@
+## [1.40.1](https://github.com/0szaby0-lab/szaby-patches/compare/v1.40.0...v1.40.1) (2026-08-18)
+
+### 🐛 Bug Fixes
+
+* force release ([3a85a0a](https://github.com/0szaby0-lab/szaby-patches/commit/3a85a0a0939d7f4273212305b16eb0dbed7af91a))
+
 ## [1.39.1](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0...v1.39.1) (2026-08-08)
 
 ### 🐛 Bug Fixes
