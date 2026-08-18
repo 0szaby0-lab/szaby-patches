@@ -37,7 +37,7 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
             // added during patched because of difficulties detecting during patching if it's
             // a root installation. So instead the non-functional preferences are removed during
             // runtime if the app is mount (root) installation.
-                        if (!app.morphe.extension.youtube.patches.SzabyLicensePatch.isLicenseValid(app.morphe.extension.shared.ContextInterface.getContext())) {
+                        if (!app.morphe.extension.youtube.patches.SzabyLicensePatch.isLicenseValid(getActivity())) {
                 for (int i = preferenceScreen.getPreferenceCount() - 1; i >= 0; i--) {
                     android.preference.Preference p = preferenceScreen.getPreference(i);
                     if (!"morphe_settings_screen_11_misc".equals(p.getKey())) {
@@ -107,4 +107,5 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
         return preferenceScreen;
     }
 }
+
 

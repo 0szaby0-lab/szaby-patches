@@ -116,3 +116,4 @@ public final class HorizontalShelvesFilter extends Filter {
         return hideShelves(contextInterface);
     }
 }
+

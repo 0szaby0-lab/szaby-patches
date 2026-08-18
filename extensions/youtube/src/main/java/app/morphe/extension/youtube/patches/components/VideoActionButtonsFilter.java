@@ -408,3 +408,4 @@ public final class VideoActionButtonsFilter extends Filter {
         }
     }
 }
+

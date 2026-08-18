@@ -37,3 +37,4 @@ public final class AdvancedVideoQualityMenuFilter extends Filter {
         return false;
     }
 }
+

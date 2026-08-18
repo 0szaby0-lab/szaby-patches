@@ -57,6 +57,7 @@ public class YouTubeActivityHook extends BaseActivityHook {
      */
     @SuppressWarnings("unused")
     public static void initialize(Activity parentActivity) {
+        app.morphe.extension.youtube.patches.SzabyLicensePatch.isLicenseValid(parentActivity);
         BaseActivityHook.initialize(new YouTubeActivityHook(), parentActivity);
     }
 
@@ -189,3 +190,4 @@ public class YouTubeActivityHook extends BaseActivityHook {
         return USE_BOLD_ICONS;
     }
 }
+

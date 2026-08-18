@@ -335,3 +335,4 @@ public final class KeywordContentFilter extends BufferPhraseFilter {
     private static final BufferHideStatsTracker sharedTracker =
             new BufferHideStatsTracker(Settings.KEYWORD_HIDES_24H);
 }
+

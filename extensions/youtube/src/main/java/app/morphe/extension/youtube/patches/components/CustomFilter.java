@@ -28,3 +28,4 @@ public final class CustomFilter extends BaseCustomFilter {
         );
     }
 }
+

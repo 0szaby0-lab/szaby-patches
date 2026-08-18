@@ -137,7 +137,7 @@ public final class SzabyLicensePatch {
 
     private static void updateStatusSummary(Context context, String status) {
         try {
-            Setting.preferences.edit().putString("szaby_license_status_summary", status).apply();
+            context.getSharedPreferences("morphe_prefs", Context.MODE_PRIVATE).edit().putString("szaby_license_status_summary", status).apply();
         } catch (Exception ignored) {}
     }
 
@@ -168,3 +168,5 @@ public final class SzabyLicensePatch {
         }
     }
 }
+
+
