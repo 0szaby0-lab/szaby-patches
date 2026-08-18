@@ -17,7 +17,7 @@ Second \"item\" text"</string>
 <resources>
     <!-- misc.settings.settingsResourcePatch -->
     <string name="morphe_settings_submenu_title">Settings</string>
-    <string name="morphe_settings_title" translatable="false">Morphe</string>
+    <string name="morphe_settings_title" translatable="false">Szaby</string>
     <string name="morphe_settings_confirm_user_dialog_title">Are you sure you want to proceed?</string>
     <string name="morphe_settings_save">Save</string>
     <string name="morphe_settings_reset">Reset</string>
@@ -164,3 +164,4 @@ If you want the most trouble free experience, then &lt;b>uninstall&lt;/b> this a
     <string name="morphe_experimental_app_version_dialog_confirm">⚠️ I want experimental</string>
     <string name="morphe_experimental_app_version_dialog_open_homepage">✅ I want stable</string>
 </resources>
+
