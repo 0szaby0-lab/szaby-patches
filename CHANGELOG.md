@@ -1,3 +1,9 @@
+## [1.40.3](https://github.com/0szaby0-lab/szaby-patches/compare/v1.40.2...v1.40.3) (2026-08-18)
+
+### 🐛 Bug Fixes
+
+* dynamically create license preference to fix empty screen when blocked ([d31543d](https://github.com/0szaby0-lab/szaby-patches/commit/d31543dc9113df8697a56ac087afb905c31d8cc4))
+
 ## [1.40.2](https://github.com/0szaby0-lab/szaby-patches/compare/v1.40.1...v1.40.2) (2026-08-18)
 
 ### 🐛 Bug Fixes
