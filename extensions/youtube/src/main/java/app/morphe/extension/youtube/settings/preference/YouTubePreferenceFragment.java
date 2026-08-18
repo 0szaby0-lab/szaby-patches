@@ -37,6 +37,23 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
             // added during patched because of difficulties detecting during patching if it's
             // a root installation. So instead the non-functional preferences are removed during
             // runtime if the app is mount (root) installation.
+                        if (!app.morphe.extension.youtube.patches.SzabyLicensePatch.isLicenseValid(app.morphe.extension.shared.ContextInterface.getContext())) {
+                for (int i = preferenceScreen.getPreferenceCount() - 1; i >= 0; i--) {
+                    android.preference.Preference p = preferenceScreen.getPreference(i);
+                    if (!"morphe_settings_screen_11_misc".equals(p.getKey())) {
+                        preferenceScreen.removePreference(p);
+                    } else if (p instanceof android.preference.PreferenceScreen) {
+                        android.preference.PreferenceScreen miscScreen = (android.preference.PreferenceScreen) p;
+                        miscScreen.setTitle("Szaby License");
+                        for (int j = miscScreen.getPreferenceCount() - 1; j >= 0; j--) {
+                            android.preference.Preference p2 = miscScreen.getPreference(j);
+                            if (!"szaby_license_key".equals(p2.getKey())) {
+                                miscScreen.removePreference(p2);
+                            }
+                        }
+                    }
+                }
+            }
             if (GmsCoreSupportPatch.isPackageNameOriginal()) {
                 removePreferences(
                         SharedYouTubeSettings.CUSTOM_BRANDING_ICON.key,
@@ -90,3 +107,4 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
         return preferenceScreen;
     }
 }
+

@@ -1032,3 +1032,4 @@ public final class LayoutComponentsFilter extends Filter {
         Utils.hideViewBy0dpUnderCondition(Settings.HIDE_SYNC_BUTTON, view);
     }
 }
+
