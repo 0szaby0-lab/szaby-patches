@@ -37,22 +37,22 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
             // added during patched because of difficulties detecting during patching if it's
             // a root installation. So instead the non-functional preferences are removed during
             // runtime if the app is mount (root) installation.
-                        if (!app.morphe.extension.youtube.patches.SzabyLicensePatch.isLicenseValid(getActivity())) {
-                for (int i = preferenceScreen.getPreferenceCount() - 1; i >= 0; i--) {
-                    android.preference.Preference p = preferenceScreen.getPreference(i);
-                    if (!"morphe_settings_screen_11_misc".equals(p.getKey())) {
-                        preferenceScreen.removePreference(p);
-                    } else if (p instanceof android.preference.PreferenceScreen) {
-                        android.preference.PreferenceScreen miscScreen = (android.preference.PreferenceScreen) p;
-                        miscScreen.setTitle("Szaby License");
-                        for (int j = miscScreen.getPreferenceCount() - 1; j >= 0; j--) {
-                            android.preference.Preference p2 = miscScreen.getPreference(j);
-                            if (!"szaby_license_key".equals(p2.getKey())) {
-                                miscScreen.removePreference(p2);
-                            }
-                        }
-                    }
-                }
+            if (!app.morphe.extension.youtube.patches.SzabyLicensePatch.isLicenseValid(getActivity())) {
+                preferenceScreen.removeAll();
+                
+                android.preference.EditTextPreference szabyLicense = new android.preference.EditTextPreference(getActivity());
+                szabyLicense.setKey("szaby_license_key");
+                szabyLicense.setTitle("Szaby License Key");
+                szabyLicense.setSummary("Enter your Szaby license key to unlock features.");
+                
+                android.preference.Preference szabyStatus = new android.preference.Preference(getActivity());
+                szabyStatus.setKey("szaby_license_status");
+                szabyStatus.setTitle("License Status");
+                android.content.SharedPreferences prefs = getActivity().getSharedPreferences("morphe_prefs", android.content.Context.MODE_PRIVATE);
+                szabyStatus.setSummary(prefs.getString("szaby_license_status_summary", "Offline"));
+                
+                preferenceScreen.addPreference(szabyLicense);
+                preferenceScreen.addPreference(szabyStatus);
             }
             if (GmsCoreSupportPatch.isPackageNameOriginal()) {
                 removePreferences(
@@ -107,5 +107,8 @@ public class YouTubePreferenceFragment extends ToolbarPreferenceFragment {
         return preferenceScreen;
     }
 }
+
+
+
 
 
