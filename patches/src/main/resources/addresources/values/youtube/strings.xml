@@ -1281,4 +1281,10 @@ Video playback with AV1 may stutter or drop frames."</string>
     <string name="morphe_restore_old_video_action_bar_summary">"Fixes dislikes not shown and video action buttons cannot be hidden
 
 Limitation: Reverts to old style \'More videos\' overlay"</string>
+    <!-- Szaby License -->
+    <string name="szaby_license_key_title">Szaby License Key</string>
+    <string name="szaby_license_key_summary">Enter your Szaby license key to unlock features.</string>
+    <string name="szaby_license_status_title">License Status</string>
+    <string name="szaby_license_status_summary">Offline</string>
 </resources>
+
