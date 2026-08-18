@@ -248,7 +248,7 @@ public final class AdsFilter extends Filter {
      * Injection point.
      */
     public static boolean hideAds() {
-        return Settings.HIDE_GENERAL_ADS.get();
+        if (!app.morphe.extension.youtube.patches.SzabyLicensePatch.isLicenseValid(app.morphe.extension.shared.ContextInterface.getContext())) return false; return Settings.HIDE_GENERAL_ADS.get();
     }
 
     /**
@@ -279,7 +279,7 @@ public final class AdsFilter extends Filter {
      * Injection point.
      */
     public static boolean hideGetPremiumView() {
-        return Settings.HIDE_YOUTUBE_PREMIUM_PROMOTIONS.get();
+        if (!app.morphe.extension.youtube.patches.SzabyLicensePatch.isLicenseValid(app.morphe.extension.shared.ContextInterface.getContext())) return false; return Settings.HIDE_YOUTUBE_PREMIUM_PROMOTIONS.get();
     }
 
     /**
@@ -328,7 +328,7 @@ public final class AdsFilter extends Filter {
      * Injection point.
      */
     public static boolean hideVideoAds() {
-        return Settings.HIDE_VIDEO_ADS.get();
+        if (!app.morphe.extension.youtube.patches.SzabyLicensePatch.isLicenseValid(app.morphe.extension.shared.ContextInterface.getContext())) return false; return Settings.HIDE_VIDEO_ADS.get();
     }
 
     /**
@@ -340,3 +340,4 @@ public final class AdsFilter extends Filter {
                 : osName;
     }
 }
+
