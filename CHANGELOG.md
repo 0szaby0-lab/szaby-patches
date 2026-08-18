@@ -1,3 +1,9 @@
+## [1.40.2](https://github.com/0szaby0-lab/szaby-patches/compare/v1.40.1...v1.40.2) (2026-08-18)
+
+### 🐛 Bug Fixes
+
+* add missing strings for Szaby License to fix apk build error ([a83c8dd](https://github.com/0szaby0-lab/szaby-patches/commit/a83c8dd8936b51747dabbb9da50d96d2e0e65315))
+
 ## [1.40.1](https://github.com/0szaby0-lab/szaby-patches/compare/v1.40.0...v1.40.1) (2026-08-18)
 
 ### 🐛 Bug Fixes
